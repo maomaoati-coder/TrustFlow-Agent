@@ -42,8 +42,8 @@ graph TD
 
 1. **克隆项目到本地**
    ```bash
-   [https://github.com/maomaoati-coder/TrustFlow-Agent]
-   cd TrustFlow-Agent
+https://github.com/maomaoati-coder/TrustFlow-Agent
+   
 
 2.安装必要的依赖
 pip install -r requirements.txt
