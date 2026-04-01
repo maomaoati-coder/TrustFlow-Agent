@@ -30,41 +30,6 @@ Unlike traditional agents, TrustFlow implements a **Strict Verification Gate** a
 
 ---
 
-## 🏗️ Architecture / 技术架构
-
-```mermaid
-graph TD
-    User[User Input] --> Plan[Planner Node]
-    Plan --> Exec[Tool Execution]
-    Exec --> Gate{Verification Gate}
-    Gate -- "Invalid/Error" --> Plan
-    Gate -- "Verified" --> Audit[Audit Trail & Output]
-    Audit --> End((Success))
-
-graph TD
-    User[User Input] --> Plan[Planner Node]
-    Plan --> Exec[Tool Execution]
-    Exec --> Gate{Verification Gate}
-    Gate -- "Invalid" --> Plan
-    Gate -- "Verified" --> Audit[Audit Trail & Output]
-    Audit --> Success((Success))
-
-How to Run Tests:
-# Install dependencies
-pip install pytest
-
-# Run the test suite
-pytest test_trust.py
-
-Verified Output:
-platform android -- Python 3.13.x, pytest-9.x.x
-rootdir: /data/data/com.termux/files/home
-collected 2 items
-
-test_trust.py ..                                [100%]
-
-================== 2 passed in 0.01s ==================
-
 🛠️ Installation / 安装
 
 git clone [https://github.com/maomaoati-coder/TrustFlow-Agent.git](https://github.com/maomaoati-coder/TrustFlow-Agent.git)
