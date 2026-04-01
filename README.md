@@ -42,8 +42,8 @@ pip install -r requirements.txt
 3.运行核心验证程序
 python main.py
 
-4.运行自动化测试 (确保一切正常)
-pytest
+4.运行自动化测试 (请务必使用此命令确保路径正确)
+export PYTHONPATH=$PYTHONPATH:. && pytest
 
 🗺️ Roadmap / 路线图
 ​[x] Core Verification Logic (Pure Python)
