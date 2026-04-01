@@ -40,6 +40,7 @@ graph TD
 ---
 ### 🛠️ 安装与运行步骤
 
+​建议在 Termux (Android) 或标准 Linux 环境下执行以下操作：
 1. **克隆项目到本地
 git clone https://github.com/maomaoati-coder/TrustFlow-Agent
 cd TrustFlow-Agent
