@@ -28,6 +28,15 @@ Unlike traditional agents, TrustFlow implements a **Strict Verification Gate** a
 - **📝 Traceable Audit:** Automatically logs every decision point for human review. (全链路决策审计)
 - **⚡ Zero Bloat:** Pure Python implementation with minimal dependencies. (极简架构，零冗余)
 
+## 🏗️ Architecture / 技术架构图
+
+graph TD
+    User[User Input] --> Plan[Planner Node]
+    Plan --> Exec[Tool Execution]
+    Exec --> Gate{Verification Gate}
+    Gate -- "Invalid/Error" --> Plan
+    Gate -- "Verified" --> Audit[Audit Trail]
+    Audit --> Success((Success))
 ---
 ### 🛠️ 安装与运行步骤
 
