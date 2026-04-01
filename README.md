@@ -29,12 +29,21 @@ Unlike traditional agents, TrustFlow implements a **Strict Verification Gate** a
 - **⚡ Zero Bloat:** Pure Python implementation with minimal dependencies. (极简架构，零冗余)
 
 ---
+### 🛠️ 安装与运行步骤
 
-🛠️ Installation / 安装
+1. **克隆项目到本地**
+   ```bash
+   git clone [https://github.com/maomaoati-coder/TrustFlow-Agent.git](https://github.com/maomaoati-coder/TrustFlow-Agent.git)
+   cd TrustFlow-Agent
 
-git clone [https://github.com/maomaoati-coder/TrustFlow-Agent.git](https://github.com/maomaoati-coder/TrustFlow-Agent.git)
-cd TrustFlow-Agent
+2.安装必要的依赖
 pip install -r requirements.txt
+
+3.运行核心验证程序
+python main.py
+
+4.运行自动化测试 (确保一切正常)
+pytest
 
 🗺️ Roadmap / 路线图
 ​[x] Core Verification Logic (Pure Python)
