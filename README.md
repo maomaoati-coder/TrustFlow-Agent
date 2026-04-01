@@ -41,9 +41,13 @@ graph TD
     Gate -- "Verified" --> Audit[Audit Trail & Output]
     Audit --> End((Success))
 
-🧪 Reliability Verification / 可靠性测试
-​This project follows strict TDD (Test-Driven Development). The core logic is verified on an Android environment to ensure cross-platform stability.
-​本项目坚持测试驱动开发。核心逻辑已在 Android (Termux) 环境下通过 pytest 验证。
+graph TD
+    User[User Input] --> Plan[Planner Node]
+    Plan --> Exec[Tool Execution]
+    Exec --> Gate{Verification Gate}
+    Gate -- "Invalid" --> Plan
+    Gate -- "Verified" --> Audit[Audit Trail & Output]
+    Audit --> Success((Success))
 
 How to Run Tests:
 # Install dependencies
