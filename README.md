@@ -40,3 +40,44 @@ graph TD
     Gate -- "Invalid/Error" --> Plan
     Gate -- "Verified" --> Audit[Audit Trail & Output]
     Audit --> End((Success))
+
+🧪 Reliability Verification / 可靠性测试
+​This project follows strict TDD (Test-Driven Development). The core logic is verified on an Android environment to ensure cross-platform stability.
+​本项目坚持测试驱动开发。核心逻辑已在 Android (Termux) 环境下通过 pytest 验证。
+
+How to Run Tests:
+# Install dependencies
+pip install pytest
+
+# Run the test suite
+pytest test_trust.py
+
+Verified Output:
+platform android -- Python 3.13.x, pytest-9.x.x
+rootdir: /data/data/com.termux/files/home
+collected 2 items
+
+test_trust.py ..                                [100%]
+
+================== 2 passed in 0.01s ==================
+
+🛠️ Installation / 安装
+
+git clone [https://github.com/maomaoati-coder/TrustFlow-Agent.git](https://github.com/maomaoati-coder/TrustFlow-Agent.git)
+cd TrustFlow-Agent
+pip install -r requirements.txt
+
+🗺️ Roadmap / 路线图
+​[x] Core Verification Logic (Pure Python)
+​[ ] LangGraph State Machine Integration
+​[ ] Mobile-First Low-Code UI (Coming Soon!)
+​[ ] Local LLM Support (Ollama/Llama.cpp integration)
+
+​🤝 Contributing / 贡献
+​Contributions are welcome! If you find a bug or have a feature request, please open an issue.
+​欢迎提交 Issue 或 Pull Request。让我们一起构建更可信的 AI 生态！
+
+​📄 License
+​MIT License. See LICENSE for details.
+
+
