@@ -41,10 +41,9 @@ graph TD
 ### 🛠️ 安装与运行步骤
 
 1. **克隆项目到本地**
-   ```bash
+GitHub:
 https://github.com/maomaoati-coder/TrustFlow-Agent
    
-
 2.安装必要的依赖
 pip install -r requirements.txt
 
