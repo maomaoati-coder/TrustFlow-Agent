@@ -1,1 +1,1 @@
-pytest
+export PYTHONPATH=$PYTHONPATH:. && pytest
