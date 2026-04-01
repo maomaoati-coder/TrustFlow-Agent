@@ -42,7 +42,7 @@ graph TD
 
 1. **克隆项目到本地**
    ```bash
-   git clone [https://github.com/maomaoati-coder/TrustFlow-Agent.git](https://github.com/maomaoati-coder/TrustFlow-Agent.git)
+   [https://github.com/maomaoati-coder/TrustFlow-Agent]
    cd TrustFlow-Agent
 
 2.安装必要的依赖
