@@ -38,20 +38,22 @@ graph TD
     Gate -- "Verified" --> Audit[Audit Trail]
     Audit --> Success((Success))
 ---
-### 🛠️ 安装与运行步骤
+​🛠️ Installation & Quick Start / 安装与运行步骤
+​仓库主页 / Repository: https://github.com/maomaoati-coder/TrustFlow-Agent
 
 ​建议在 Termux (Android) 或标准 Linux 环境下执行以下操作：
-1. **克隆项目到本地
+
+​1. Clone Project / 克隆项目到本地
 git clone https://github.com/maomaoati-coder/TrustFlow-Agent
 cd TrustFlow-Agent
    
-2.安装必要的依赖
+2. Install Dependencies / 安装依赖
 pip install -r requirements.txt
 
-3.运行核心验证程序
+3. Run Core Demo / 运行核心演示
 python main.py
 
-4.运行自动化测试 (请务必使用此命令确保路径正确)
+4. Run Automated Tests / 运行自动化测试
 export PYTHONPATH=$PYTHONPATH:. && pytest
 
 🗺️ Roadmap / 路线图
