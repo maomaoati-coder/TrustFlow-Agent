@@ -68,6 +68,7 @@ export PYTHONPATH=$PYTHONPATH:. && pytest
 
 ​​🌍 Community Impact & Proposals | 社区提案与影响力
 ​As an independent chip architect, I have proposed this hardware-inspired security framework to several world-class AI communities to establish a unified standard for agentic security.
+
 ​作为独立芯片架构师，我已将本项目的硬件级安全验证逻辑作为提案提交至多个全球顶级 AI 社区，推动 AI Agent 的逻辑锁验证标准：
 ​
 🚀 AutoGPT: Proposed Logic Locking Security Architecture (#12644)
