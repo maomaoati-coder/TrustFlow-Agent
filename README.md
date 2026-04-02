@@ -66,7 +66,15 @@ export PYTHONPATH=$PYTHONPATH:. && pytest
 ​Contributions are welcome! If you find a bug or have a feature request, please open an issue.
 ​欢迎提交 Issue 或 Pull Request。让我们一起构建更可信的 AI 生态！
 
-​📄 License
+​​🌍 Community Impact & Proposals | 社区提案与影响力
+​As an independent chip architect, I have proposed this hardware-inspired security framework to several world-class AI communities to establish a unified standard for agentic security.
+​作为独立芯片架构师，我已将本项目的硬件级安全验证逻辑作为提案提交至多个全球顶级 AI 社区，推动 AI Agent 的逻辑锁验证标准：
+​🚀 AutoGPT: Proposed Logic Locking Security Architecture (#12644)
+​🧠 LangChain: Feature Request: Hardware-Inspired Verification Gates (#36447)
+​🏗️ MetaGPT: SOP Security & Physical Sovereignty Audit Layer (#1994)
+​🦙 Ollama: Local Model Output Auditing Implementation (#15202)
+
+📄 License
 ​MIT License. See LICENSE for details.
 
 
