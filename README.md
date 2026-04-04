@@ -28,6 +28,26 @@ Unlike traditional agents, TrustFlow implements a **Strict Verification Gate** a
 - **📝 Traceable Audit:** Automatically logs every decision point for human review. (全链路决策审计)
 - **⚡ Zero Bloat:** Pure Python implementation with minimal dependencies. (极简架构，零冗余)
 
+---
+
+## 🧪 Real-World Verification / 实机验证逻辑 (Telemetry Enhanced)
+
+We provide a specialized **Physical Integrity Gate** verification script. This allows anyone to test the **TrustFlow-Agent**'s ability to intercept unauthorized logic and generate granular telemetry data.
+
+我们提供了一个专门的**物理完整性闸门**验证脚本。任何人都可以通过该脚本测试 **TrustFlow-Agent** 拦截非法逻辑并生成细粒度审计遥测数据的能力。
+
+### 🛠️ How to Verify / 如何验证操作流程
+
+If you are on **Termux (Android)** or **Linux**, run the following commands:
+如果您在 Termux 或 Linux 环境下，请执行以下命令：
+
+```bash
+# 1. Ensure the core agent script is present / 确保核心脚本存在
+# (Assuming you have cloned the repo)
+
+# 2. Run the specialized Telemetry Verification / 运行遥测验证
+python trustflow_agent.py
+
 ## 🏗️ Architecture / 技术架构图
 
 graph TD
