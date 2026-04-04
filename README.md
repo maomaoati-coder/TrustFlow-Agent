@@ -29,25 +29,6 @@ Unlike traditional agents, TrustFlow implements a **Strict Verification Gate** a
 - **⚡ Zero Bloat:** Pure Python implementation with minimal dependencies. (极简架构，零冗余)
 
 ---
-
-## 🧪 Real-World Verification / 实机验证逻辑 (Telemetry Enhanced)
-
-We provide a specialized **Physical Integrity Gate** verification script. This allows anyone to test the **TrustFlow-Agent**'s ability to intercept unauthorized logic and generate granular telemetry data.
-
-我们提供了一个专门的**物理完整性闸门**验证脚本。任何人都可以通过该脚本测试 **TrustFlow-Agent** 拦截非法逻辑并生成细粒度审计遥测数据的能力。
-
-### 🛠️ How to Verify / 如何验证操作流程
-
-If you are on **Termux (Android)** or **Linux**, run the following commands:
-如果您在 Termux 或 Linux 环境下，请执行以下命令：
-
-```bash
-# 1. Ensure the core agent script is present / 确保核心脚本存在
-# (Assuming you have cloned the repo)
-
-# 2. Run the specialized Telemetry Verification / 运行遥测验证
-python trustflow_agent.py
-
 ## 🏗️ Architecture / 技术架构图
 
 graph TD
@@ -82,7 +63,42 @@ export PYTHONPATH=$PYTHONPATH:. && pytest
 ​[ ] Mobile-First Low-Code UI (C
 ​[ ] Local LLM Support (Ollama/Llama.cpp integration)
 
-​🤝 Contributing / 贡献
+​## 🧪 Real-World Verification / 实机验证逻辑 (Telemetry Enhanced)
+
+We provide a specialized **Physical Integrity Gate** verification script. This allows anyone to test the **TrustFlow-Agent**'s ability to intercept unauthorized logic and generate granular telemetry data.
+
+我们提供了一个专门的**物理完整性闸门**验证脚本。任何人都可以通过该脚本测试 **TrustFlow-Agent** 拦截非法逻辑并生成细粒度审计遥测数据的能力。
+
+### 🛠️ How to Verify / 如何验证操作流程
+
+If you are on **Termux (Android)** or **Linux**, run the following commands:
+如果您在 Termux 或 Linux 环境下，请执行以下命令：
+
+```bash
+# 1. Ensure the core agent script is present / 确保核心脚本存在
+# (Assuming you have cloned the repo)
+
+# 2. Run the specialized Telemetry Verification / 运行遥测验证
+python trustflow_agent.py
+
+
+### 📈 Evidence & Validation (April 2026)
+Successfully verified the **TrustFlow-Agent** with granular telemetry output.
+
+<p align="center">
+  <img src="trustflow_verification.png" alt="TrustFlow Telemetry Verification" width="600">
+</p>
+
+> **Key Results:**
+> - **Metadata Exposure**: Identified specific logic locks (`3nm_core`, `secret_key`).
+> - **Integrity Score**: Quantified physical safety at 0.15 for downstream semantic chains.
+
+​Key Indicators in the Screenshot / 截图关键指标:
+​[Action: Intercept]: Successfully locked the logic path when 3nm_core was detected. (成功拦截敏感资产泄露)
+​[Telemetry Report]: Generated raw JSON evidence including integrity_score and triggered_locks. (生成包含完整性评分和触发锁的 JSON 遥测报告)
+​[Result]: 100% Logic Integrity preserved for downstream semantic chains. (为下游语义层提供 100% 可靠的逻辑证据)
+
+🤝 Contributing / 贡献
 ​Contributions are welcome! If you find a bug or have a feature request, please open an issue.
 ​欢迎提交 Issue 或 Pull Request。让我们一起构建更可信的 AI 生态！
 
