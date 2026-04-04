@@ -28,7 +28,6 @@ Unlike traditional agents, TrustFlow implements a **Strict Verification Gate** a
 - **📝 Traceable Audit:** Automatically logs every decision point for human review. (全链路决策审计)
 - **⚡ Zero Bloat:** Pure Python implementation with minimal dependencies. (极简架构，零冗余)
 
----
 ## 🏗️ Architecture / 技术架构图
 
 graph TD
@@ -63,7 +62,7 @@ export PYTHONPATH=$PYTHONPATH:. && pytest
 ​[ ] Mobile-First Low-Code UI (C
 ​[ ] Local LLM Support (Ollama/Llama.cpp integration)
 
-🤝 Contributing / 贡献
+​🤝 Contributing / 贡献
 ​Contributions are welcome! If you find a bug or have a feature request, please open an issue.
 ​欢迎提交 Issue 或 Pull Request。让我们一起构建更可信的 AI 生态！
 
@@ -88,5 +87,4 @@ export PYTHONPATH=$PYTHONPATH:. && pytest
 
 📄 License
 ​MIT License. See LICENSE for details.
-
 
