@@ -82,6 +82,8 @@ If you are on **Termux (Android)** or **Linux**, run the following commands:
 python trustflow_agent.py
 
 
+
+
 ### 📈 Evidence & Validation (April 2026)
 Successfully verified the **TrustFlow-Agent** with granular telemetry output.
 
