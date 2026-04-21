@@ -26,15 +26,16 @@ TrustFlow-Agent implements a hardware-inspired **Logic Gate** interception mecha
 
 ---
 
-### 3. Live Verification Demo
-The following video demonstrates the **35-case Resilience Suite** running on an ARM64 mobile environment (Termux). The architecture maintains microsecond-level latency even under high-frequency logic sampling.
+---
 
-<div align="center">
-  <a href="1000004972.gif">
-    <img src="https://img.shields.io/badge/▶️_WATCH_VERIFICATION_LOG-1a237e?style=for-the-badge&logo=youtube" width="300" />
-  </a>
-  <p><i>(Click above to play the 35-case stress test record)</i></p>
-</div>
+### 3. Live Verification Demo (35-Case Resilience Suite)
+The following automated benchmark demonstrates the **Origin-Locked Logic Gate** maintaining microsecond-level latency while neutralizing injection attacks in real-time.
+
+<p align="center">
+  <img src="1000004972.gif" width="600" title="Deterministic Verification Log" alt="35 Cases Passing">
+  <br />
+  <i><b>Autoplay Status:</b> 35/35 Cases passing with deterministic precision (ARM64/Termux)</i>
+</p>
 
 ---
 
