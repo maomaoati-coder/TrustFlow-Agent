@@ -3,31 +3,31 @@
 [![Python Version](https://img.shields.io/badge/Python-3.13%2B-blue.svg)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Mobile%20%7C%20Edge-green.svg)]()
 [![Security](https://img.shields.io/badge/Security-Deterministic-red.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > **"If the origin is locked, the outcome is invariant."**
-> 基于 3D 堆叠芯片安全架构设计的 AI Agent 确定性审计协议。
+> A deterministic audit protocol for AI Agents, inspired by 3D-stacked IC security architectures.
 
-## 🌟 核心愿景
-TrustFlow-Agent 旨在解决 AI 代理执行中的语义不确定性。不同于传统的“概率评分（Probabilistic Scoring）”，我们引入了硬件级的 **Logic Gate (逻辑门)** 拦截机制，确保任何未经验证的逻辑路径在执行前即被物理锁死。
+## 🌟 Core Vision
+TrustFlow-Agent solves the "Semantic Uncertainty" in AI agent execution. Unlike traditional probabilistic scoring models, we implement a hardware-level **Logic Gate** interception mechanism. This ensures that unauthorized logic paths are physically "locked" before any code execution occurs.
 
-## 🛠️ 技术优势
-- **确定性拦截 (Deterministic)**: 摒弃 0.0-1.0 的模糊评分，只存在 `PASS` 或 `BLOCK` 两种状态。
-- **毫秒级性能 (Ultra-Low Latency)**: 核心审计延迟低于 **0.001ms**，对系统零负载。
-- **边缘端原生 (Edge-First)**: 完美兼容 Termux (Android)，无需任何第三方依赖包。
+## 🛠️ Technical Advantages
+- **Deterministic Interception**: Replaces vague 0.0-1.0 confidence scores with binary `PASS` or `BLOCK` states.
+- **Ultra-Low Latency**: Core audit latency is optimized to **< 0.001ms**, ensuring zero performance impact on LLM workflows.
+- **Edge-Native**: Verified on **Termux (Android)** and resource-constrained environments. 100% Pure Python with zero external dependencies.
 
-## 📊 验证报告 (v1.0.0-Alpha)
-我们在 **Python 3.13 (Termux)** 环境下进行了严苛的逻辑压力测试：
+## 📊 Verification Report (v1.0.0-Alpha)
+Stress-tested under **Python 3.13 (Termux)** environment:
 
-| 测试场景 | 预期行为 | 实际状态 | 响应延迟 |
+| Scenario | Expected | Actual | Latency |
 | :--- | :--- | :--- | :--- |
 | Authorized Path | PASS | ✅ PASS | 0.0007 ms |
 | Unauthorized Injection | BLOCK | 🛡️ BLOCK | 0.0003 ms |
 | Missing Fingerprint | BLOCK | 🛡️ BLOCK | 0.0002 ms |
 | Backup Auth Path | PASS | ✅ PASS | 0.0009 ms |
 
-### 审计证据 (Forensic Telemetry)
-每次决策均生成不可篡改的 JSON 格式遥测数据：
+### Forensic Telemetry
+Every decision generates immutable JSON telemetry for audit trails:
 ```json
 {
   "status": "BLOCK",
