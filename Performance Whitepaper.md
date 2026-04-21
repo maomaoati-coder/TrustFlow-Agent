@@ -32,7 +32,7 @@ TrustFlow-Agent implements a hardware-inspired **Logic Gate** interception mecha
 The following automated benchmark demonstrates the **Origin-Locked Logic Gate** maintaining microsecond-level latency while neutralizing injection attacks in real-time.
 
 <p align="center">
-  <img src="1000004972.gif" width="600" title="Deterministic Verification Log" alt="35 Cases Passing">
+  <img src="verification_v2.gif" width="600" title="Deterministic Verification Log" alt="35 Cases Passing">
   <br />
   <i><b>Autoplay Status:</b> 35/35 Cases passing with deterministic precision (ARM64/Termux)</i>
 </p>
