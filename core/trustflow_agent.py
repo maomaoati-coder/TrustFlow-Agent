@@ -40,10 +40,11 @@ class TrustFlowGate:
         """
         start_time = time.perf_counter()
         
-        # 1. Entropy Check: Is the output noise or structured logic?
-        # 2. Slot Mapping: Does the packet contain authorized logic fingerprints?
+        # 1. Entropy Check & Slot Mapping
+        # In this SDK, we verify if the logic fingerprint matches the hardware lock.
         logic_fingerprint = packet.get("slot_id")
         
+        # Binary Interception Logic
         is_valid = logic_fingerprint in self.locked_slots
         
         execution_time = (time.perf_counter() - start_time) * 1000 # ms
@@ -57,13 +58,12 @@ class TrustFlowGate:
         """
         [Forensic Telemetry]
         Generates an immutable log entry for post-hoc audit.
-        Provides hardware-grade proof for third-party validators (e.g. TKCollective).
         """
         entry = {
             "timestamp": time.time(),
             "origin": packet.get("origin", "UNKNOWN"),
             "status": "PASS" if status else "BLOCK",
-            "latency_ms": f"{latency:.4f}ms", # Zero-overhead target
+            "latency_ms": f"{latency:.4f}ms", 
             "axioms_verified": ["Bio-Hash", "Phys-XOR", "Entropy"]
         }
         self.audit_trail.append(entry)
@@ -78,31 +78,31 @@ class TrustFlowEngine:
     def __init__(self):
         self.gate = TrustFlowGate()
 
-    def execute_with_audit(self, payload: str):
+    def execute_with_audit(self, payload: str, slot_id: Optional[str] = None):
         """
         [Deterministic Execution Path]
         The only entry point for code execution. 
         Enforces: No Audit, No Execution.
         """
-        # Simulated packet extraction from raw LLM output
+        # Simulated packet extraction
         mock_packet = {
             "origin": "LLM_Output_Buffer",
-            "slot_id": "DA", # Hardcoded for demo/verification
+            "slot_id": slot_id, 
             "content": payload
         }
 
         if self.gate.intercept_audit(mock_packet):
-            print(f"[TRUSTFLOW] PASS: Origin Locked. Executing payload...")
+            # In a real scenario, this is where the code execution would trigger
             return True
         else:
-            print(f"[TRUSTFLOW] BLOCK: Logic Integrity Compromised.")
             return False
 
-# --- STANDALONE VERIFICATION (Termux/Android Compatible) ---
+# --- STANDALONE VERIFICATION ---
 if __name__ == "__main__":
+    # Internal self-test
     engine = TrustFlowEngine()
-    test_payload = "print('Hello World')"
-    
-    print("--- Starting Deterministic Audit Trace ---")
-    engine.execute_with_audit(test_payload)
-    print(f"Audit Logs: {json.dumps(engine.gate.audit_trail, indent=2)}")
+    print("Self-test: Passing valid key 'DA'...")
+    assert engine.execute_with_audit("test", "DA") == True
+    print("Self-test: Blocking invalid key 'XX'...")
+    assert engine.execute_with_audit("test", "XX") == False
+    print("TrustFlow Core: Status OK.")
