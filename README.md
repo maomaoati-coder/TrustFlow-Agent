@@ -3,6 +3,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.13%2B-blue.svg)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Mobile%20%7C%20Edge-green.svg)]()
 [![Security](https://img.shields.io/badge/Security-Deterministic-red.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **"If the origin is locked, the outcome is invariant."**
 > 基于 3D 堆叠芯片安全架构设计的 AI Agent 确定性审计协议。
