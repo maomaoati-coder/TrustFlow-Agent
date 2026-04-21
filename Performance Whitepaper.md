@@ -30,7 +30,7 @@ TrustFlow-Agent implements a hardware-inspired **Logic Gate** interception mecha
 The following video demonstrates the **35-case Resilience Suite** running on an ARM64 mobile environment (Termux). The architecture maintains microsecond-level latency even under high-frequency logic sampling.
 
 <div align="center">
-  <a href="1000004972.gif">
+  <a href="1000004972.mp4">
     <img src="https://img.shields.io/badge/▶️_WATCH_VERIFICATION_LOG-1a237e?style=for-the-badge&logo=youtube" width="300" />
   </a>
   <p><i>(Click above to play the 35-case stress test record)</i></p>
